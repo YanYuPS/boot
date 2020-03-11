@@ -1,0 +1,26 @@
+
+spring:
+  profiles:
+    active: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ecommerce?useSSL=false
+    username: root
+    password: root.123
+  # 配置redis
+  redis:
+    host: localhost
+    port: 6379
+
+server:
+  port: 8081
+
+# mybatis配置
+mybatis:
+  # 实体类别名包路径
+  type-aliases-package: com.zy.pojo
+  # 映射文件路径
+  # mapper-locations: classpath:mappers/*.xml
+  configuration:
+    # 控制台输出执行sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
